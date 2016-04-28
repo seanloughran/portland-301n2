@@ -1,17 +1,17 @@
-= Review =
+# Review
 Kickoff! (keep it to a half-hour, max!)
 
-Standard kickoff deck
+# Standard kickoff deck
 CLASS 1 KICKOFF SLIDES (For non-Seattle campuses, make a copy of this deck and personalize it for your class.)
 
-Flow of this course
+# Flow of this course
 
-Intros
+# Intros
 * Instructor
 * TAs
 * Students
 
-= Opening Talk =
+# Opening Talk
 * Qualities to being a good programmer
   Iterative
    - do the smallest thing possible, see if it works
@@ -32,19 +32,19 @@ Intros
 
 Engagement during class (limit laptops)
 
-= Slides =
+# Slides
 CLASS 1 Agile and MVC
 
-= Git Demo =
+# Git Demo
 Git demo everyone add their name
 Repeat. Strategies for being more successful?
 
-= Slides =
+# Slides
 CLASS 1 DOM & jQuery
 
-= jQuery Demos =
+# jQuery Demos
 
-= Objectives =
+# Objectives
 jQuery: DOM
   Understand when the jQuery library is useful(and how to include it (local vs CDN)).
   Perform DOM manipulations, like append, remove, clone, html, text
@@ -52,11 +52,11 @@ jQuery: DOM
   Differentiate between certain methods & the process of chaining (RTFM!)
   Understand <script> loading in HTML.
 
-= Reading =
+# Reading
 
 JS&jQ: pp 293-325 (Context: 293-301; Essential: 310-325; Reference: 302-309)
 
-= Concepts =
+# Concepts
 
 Agenda for whiteboard:
 ✓ Welcome to Code 301
@@ -76,7 +76,7 @@ What students NEED to know before lab time:
 4. jQuery cheatsheet, and how to use $(‘selector’).method(args)
 5. BONUS assignments are there to help if you want to learn more
 
-= Demo =
+# Demo
 Project setup:
 ESLint
 LiveServer
@@ -92,7 +92,7 @@ forEach
 CSS Reset
 
 
-= Daily Key Concepts =
+# Daily Key Concepts
 How Agile generates good results.
 What is MVC? And why is it helpful?
 Structure for MVC
@@ -105,7 +105,7 @@ How .clone can be used to work as a simple templating system, gearing up for han
 How to chain functions
 Under the hood, jQuery uses standard JS functions.
 
-= Assignments =
+# Assignments
 PREWORK:  Dev setup: live-server, ESlint, npm packages
 
 PAIR:
