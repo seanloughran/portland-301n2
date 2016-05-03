@@ -10,7 +10,7 @@ Kickoff! (keep it to a half-hour, max!)
 * Tuesday are lecture days
 * Thursdays are for labs
 * Sunday will be a combination of lab/lecture
-* Monday/Wednesday are for coworking. Instrcutors may or may not be present, but the expectation is you **will be here** for coworking days
+* Monday/Wednesday are for co-working. Instructors may or may not be present, but the expectation is you **will be here** for co-working days
 
 ## Intros
 * Instructor
@@ -43,11 +43,14 @@ Kickoff! (keep it to a half-hour, max!)
 * Acceptance of ambiguities
 	- don't expect requirements or problem definition to be clear at the beginning
 	- work with what you have. Iterate towrads a goal
-	- users may have issue determining requirements from a blank slate (screen). It's best to offer them something and then develop from there 
-* Engagement during class (limit laptops)
-	- If you are working on your laptop during lecture, you are not paying full attention to the class. There are some exceptions (taking notes, trying examples)
+	- users may have issue determining requirements from a blank slate (screen). It's best to offer them something and then develop from there
+* Engagement during class
+	- Use your laptop only if it enhances your understanding of the lecture (coding, etc). Try and avoid random browsing, reading unrelated emails, chats, etc.
 	- Try and be fully present during class
 	- This class is what you make of it. Instructors and TAs are here as **guides**, but ultimately this is your journey
+* Trade-offs
+	- Do I make my site work better or faster? More functionality, or clean up code that I have
+	- Ultimately, these trade offs are a personal choice. I have a tendency to make code clean and compact before anything else
 
 ## Slides
 [CLASS 1 Agile and MVC](slides/Code 301 - Class 02 Slides Agile & MVC.pdf)
@@ -117,10 +120,10 @@ git push origin my-feature-002
 # temporarily stash changes
 git stash
 # do something
-git stash pop	
+git stash pop
 
-``` 
-**Do not rebase** unless you understand it fully! Rebasing rewrites history and should not be used on any shared branches, only locally. When in doubt, do not use it. 
+```
+**Do not rebase** unless you understand it fully! Rebasing rewrites history and should not be used on any shared branches, only locally. When in doubt, do not use it.
 
 ## Slides
 [CLASS 1 DOM & jQuery](slides/Code 301 - Class 03 Dom - jQuery.pdf)
@@ -169,7 +172,7 @@ git stash pop
 
 ## Assignments
 * PREWORK:  
-	- Dev setup: 
+	- Dev setup:
 		- live-server
 		- ESlint
 		- npm packages
