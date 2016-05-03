@@ -42,7 +42,7 @@ Kickoff! (keep it to a half-hour, max!)
    - every problem you solve on your own is a victory
 * Acceptance of ambiguities
 	- don't expect requirements or problem definition to be clear at the beginning
-	- work with what you have. Iterate towrads a goal
+	- work with what you have. Iterate towards a goal
 	- users may have issue determining requirements from a blank slate (screen). It's best to offer them something and then develop from there
 * Engagement during class
 	- Use your laptop only if it enhances your understanding of the lecture (coding, etc). Try and avoid random browsing, reading unrelated emails, chats, etc.
@@ -151,13 +151,13 @@ git stash pop
 * How to work in Pairs,
 * How to fork and clone and collaborate on the pair assignment
 * That this is a tough class, and SANDBOX learning is hard if you aren’t used to it.
-* jQuery cheatsheet, and how to use $(‘selector’).method(args)
+* [jQuery cheatsheet](https://oscarotero.com/jquery/), and how to use $(‘selector’).method(args)
 * BONUS assignments are there to help if you want to learn more
 
 ## Demo
 ### Project setup:
-* ESLint
-* LiveServer
+* [ESLint](https://github.com/AtomLinter/linter-eslint)
+* [LiveServer](https://github.com/tapio/live-server)
 * In the chrome web inspector demo
 * Basic Selectors
 * other examples from [book code](http://javascriptbook.com/code/c07/)
