@@ -6,6 +6,26 @@ Kickoff! (keep it to a half-hour, max!)
 [CLASS 1 KICKOFF SLIDES](slides/pdx301d3_d1.1_Intro.pdf)
 
 ## Flow of this course
+### Overview
+* Students will collaboratively design and create a single page web application from scratch using MVC architecture built with clean HTML, CSS and Javascript that satisfies stakeholder requirements captured in user stories
+* Students will have the skills to enroll in Code 401 course or attain an entry-level website development job or internship by completing course requirements
+
+#### Weeks 1-2
+Students will construct and manage interactive, client side websites by creating and altering the Document Object Model through selection, traversal and manipulation
+
+#### Weeks 3-4
+Students will write a model layer in their applications that accesses and transforms persisted client-side data, conforming to common WRRC (web request-response cycle), FP (functional programming) and CRUD (create-read-update-delete) conventions
+
+#### Weeks 5-6
+Students will complete their MVC apps by:
+
+* refactoring to a SPA (single page architecture) pattern with router and controller
+* integrating 3rd party REST APIs to display external data
+* deploying to a production environment (with provided custom server code)
+
+#### Weeks 7-8
+Project week.
+
 ### General Breakdown
 * Tuesday are lecture days
 * Thursdays are for labs
