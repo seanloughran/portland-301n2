@@ -27,7 +27,13 @@ Article.prototype.toHtml = function() {
 
 
   // Include the publication date as a 'title' attribute to show on hover:
-  $newArticle.find('time[pubdate]').attr('title', this.publishedOn);
+  $newArticle.find('time[pubdate]').attr('title', this.publishedOn).hover(
+  function() {
+    $(this).append("<span style='color:green; margin-left: 10px;'>" + $(this).attr('title') + "</span>");
+  }, function() {
+    $( this ).find( "span:last" ).remove();
+  }
+);
 
   // Display the date as a relative number of "days ago":
   $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
