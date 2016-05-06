@@ -12,4 +12,5 @@ $(function(){
   $myTemplate.find('li:last a').attr('href', 'https://twitter.com/kbrumer');
   $('main').append($myTemplate);
   $('#my-template').remove();
+
 });
