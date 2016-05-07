@@ -65,7 +65,7 @@ $(document).ready(function(){
   });
 
 
-  //Example #4-2 Prevent Default - Input
+  //Example #4-2 Prevent Default - Link
   $('#my-textbox').on('keypress', function(e) {
     var charCode = e.charCode;
     if (charCode !== 0) {
