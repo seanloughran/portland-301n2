@@ -1,0 +1,26 @@
+main {
+  text-align: center;
+  font-family: 'Courier', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Poiret One', sans-serif;
+  font-weight: bold;
+}
+
+#title-headline {
+  display: inline-block;
+}
+
+#nav-links {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+}
