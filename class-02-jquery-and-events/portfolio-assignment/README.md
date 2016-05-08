@@ -5,9 +5,11 @@ Continue building and improving your portfolio site. Here's how you can leverage
 Adapt these stories as necessary to fit how you want to build your portfolio.
 
 ## Github
-  1. You will have a directory here for your portfolio:
+* You will have a directory here for your portfolio:
+  
   ```portland-301n2/portfolio-assignment/<github-account>```
-  1. Check your code in, push to your forked repo, and then submit a PR to the codefellows repo.
+  
+* Check your code in, push to your forked repo, and then submit a PR to the codefellows repo.
 
 ## User Stories: MVP
   1. As the creator, I want the Home and About nav links to act as tabs, so my story is revealed FAST.
