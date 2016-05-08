@@ -5,9 +5,7 @@ Continue building and improving your portfolio site. Here's how you can leverage
 Adapt these stories as necessary to fit how you want to build your portfolio.
 
 ## Github
-* You will have a directory here for your portfolio:
-  
-  ```portland-301n2/portfolio-assignment/<github-account>```
+* You will have a directory here for your portfolio: `portland-301n2/portfolio-assignment/<github-account>`
   
 * Check your code in, push to your forked repo, and then submit a PR to the codefellows repo.
 
