@@ -144,10 +144,6 @@ img{
   float: right;
 }
 
-.demo{
-  font-style: oblique;
-  font-size: 20px;
-}
 
 /*VIDEO MODAL*/
 /*DISCLAIMER!! USED CODE EXAMPLE FROM W3 SCHOOLS CAN EXPLAIN MODAL CODE THOUGH*/
@@ -167,13 +163,10 @@ img{
   background-color: #fefefe;
   margin: auto;
   margin-top: 20px;
-  width: 90%;
+  width: 70%;
   padding: 20px;
 }
 
-video{
-  width: 100%;
-}
 
 /*ABOUT ME*/
 

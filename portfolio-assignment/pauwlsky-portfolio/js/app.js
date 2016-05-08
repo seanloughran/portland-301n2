@@ -1,17 +1,15 @@
 $(function(){
 
-  var Project = function(title, date, img, video, text, skills, url) {
+  var Project = function(title, date, img, text, skills, url) {
     this.title = title;
     this.date = date;
     this.img = img;
-    this.video = video;
     this.text = text;
     this.skills = skills;
     this.url = url;
   };
 
   Project.prototype.toHtml = function(){
-    var that = this;
     var $projectArticle = $('.project').clone();
     $projectArticle.find('.days-ago').html('Created about ' + parseInt((new Date() - new Date(this.date))/60/60/24/1000) + ' days ago');
     var $title = $projectArticle.find('.title');
@@ -35,11 +33,11 @@ $(function(){
       $projectArticle.find('.demo').addClass('text-right');
       $skillsGithub.removeClass('text-right').addClass('text-left');
     }
+    var that = this;
     $projectArticle.find('.modal-show').on('click', function(e){
       e.preventDefault();
       $('.modal').css('display', 'block');
-      $('.modal-content').append('<video width="1200" height="500" autoplay>' +
-        '<source src="' + that.video + '"type="video/mp4">' + '</video>');
+      $('.modal-content').append('<h1 class="header">'+that.title+'</h1><img src="' + that.img + '"/>');
     });
   };
 
@@ -56,7 +54,7 @@ $(function(){
         return (new Date(b.date)) - (new Date(a.date));
       });
       data.forEach(function(item){
-        var project = new Project(item.title, item.date, item.img, item.video, item.text, item.skills, item.url);
+        var project = new Project(item.title, item.date, item.img, item.text, item.skills, item.url);
         project.toHtml();
       });
       $('.project').remove();
