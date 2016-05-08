@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Demo Page</title>
+    <title>Blog</title>
     <link rel="stylesheet" href="vendor/styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/modules.css">
@@ -11,19 +11,10 @@
     <main>
         <header>
           <h1>
-            Demo Page! Live Server is awesome.
+            Kilovolt Blog!
           </h1>
           <p>The shocking power of static pages</p>
         </header>
-        <div id="my-template">
-          <h1>My Header</h1>
-          <ul>
-            <li> This is thing one. </li>
-            <li> This is thing two. </li>
-            <li> And a link
-              <a href="http://twitter.com/brookr" target="_blank">Twitter</a>
-            </li>
-        </div>
         <nav>
           <ul>
             <li>Articles</li>
@@ -32,6 +23,18 @@
             <li><a href="http://github.com/brookr" target="_blank">Github</a></li>
           </ul>
         </nav>
+        <section id="articles">
+          <article class="template" data-category="cat">
+            <header>
+              <h1>Title</h1>
+              <div class="byline">
+                By <address><a href="">Author Name</a></address>
+                published <time pubdate datetime="2000-01-01">Publish Time</time>
+              </div>
+            </header>
+            <section class="article-body"></section>
+          </article>
+        </section>
       </div>
     </main>
     <footer>
@@ -39,8 +42,8 @@
     </footer>
 
     <!-- // DONE: Include any/all needed script tags -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="scripts/demo.js"></script>
-
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    <script src="scripts/blogArticles.js"></script>
+    <script src="scripts/article.js"></script>
   </body>
 </html>
