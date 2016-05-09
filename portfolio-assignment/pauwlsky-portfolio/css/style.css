@@ -43,6 +43,7 @@ p{
   font-family: 'Lora', serif;
 }
 
+
 /*HEADER AND BODY*/
 
 .header-container{
@@ -86,19 +87,26 @@ p{
 
 /*NAV STYLING*/
 .nav-container{
+  justify-content: center;
+  align-items: center;
+  display: flex;
   margin: 30px auto;
   border-radius: 3px;
   background-color: rgba(66, 84, 107, 0.14);
   padding: 1% 1%;
   text-align: center;
+  height: 80px;
 }
 
 nav ul{
-  margin: auto;
+  display: flex;
   padding:10px;
+  width: 60%;
 }
 
 nav li{
+  width: 50%;
+  height: 100%;
   list-style-type: none;
   border: solid rgba(64, 61, 61, 0.09) 1px;
   padding: 10px;
@@ -111,23 +119,21 @@ nav li{
 nav a{
   text-decoration: none;
   color: #437365;
+  display: block;
 }
 
 /*SELECT */
-.select-container{
-  margin: 30px auto;
-  border-radius: 3px;
-  background-color: rgba(66, 84, 107, 0.14);
-  padding: 1% 5%;
-  width: 500px;
-  text-align: center;
-}
 
 select{
-  width: 100%;
+  -webkit-appearance:none;
+  padding:10px;
+  width: 30%;
+  font-size: 15px;
+  color:  #437365;
+  background-color: rgba(140, 195, 176, 0.14);
 }
 
-/*ARTICLE STYLING*/
+/*ARTICLE CONTENT STYLING*/
 
 article{
   margin-top: 30px;
@@ -156,15 +162,29 @@ article{
   text-align:left;
 }
 
+a.show-more{
+  text-decoration: none;
+  font-size: 17px;
+  letter-spacing: 1px;
+  margin: 0 20px;
+}
+
+.skillsGithub{
+  padding: 0 20px 20px;
+  margin: 20px 0;
+}
+
+ .skills a{
+  text-decoration: none;
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+
 hr{
   border: 1px solid #6F7367;
   clear: both;
 }
 
-.skillsGithub{
-  padding: 0 20px 20px;
-  margin: 0;
-}
 /*IMAGE STYLING*/
 img{
   max-width: 100%;
@@ -178,7 +198,6 @@ img{
 
 .image-left {
   float: left;
-  margin: 10px;
 }
 
 .image-right{
@@ -186,7 +205,6 @@ img{
 }
 
 
-/*VIDEO MODAL*/
 /*DISCLAIMER!! USED CODE EXAMPLE FROM W3 SCHOOLS CAN EXPLAIN MODAL CODE THOUGH*/
 .modal{
   display: none; /* Hidden by default */
@@ -215,3 +233,6 @@ img{
   background-color: rgba(225, 225, 225, 0.64);
   justify-content: flex-end;
 }
+
+
+TODO /*MEDIA QUERIES*/
