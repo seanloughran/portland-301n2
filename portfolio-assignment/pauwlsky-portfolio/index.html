@@ -14,6 +14,19 @@
       <h1 class="header">Pauwlsky Portfolio</h1>
       <h4 class="sub-header">Keenan P. Wells</h4>
     </div>
+    <nav id="nav" class="nav-container">
+      <ul>
+        <li><a id="project-li" href="#">Projects</a></li>
+        <li><a id="about-li" href="#">About Me</a></li>
+      </ul>
+      <div class="select-container">
+        <h4>Select Project By Skills Employed</h4>
+        <select id="skills-select">
+          <option val="">See Project By Skills Employed</option>
+        </select>
+      </div>
+    </nav>
+
     <div id="project" class="container">
       <h1 class="header">My Current Front-End Work</h1>
       <article class="project">
@@ -37,7 +50,7 @@
         </div>
       </div>
     </div>
-    <div id="about" class="container" style="display:none">
+    <div id="about" class="container">
       <div class="header-container">
         <h1 class="header">About Me</h1>
         <img class="logo me" src="images/me.jpg" />
@@ -48,7 +61,8 @@
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
-  <script src="js/portfolioitems.js"></script>
+  <script src="js/portfolioitems.json"></script>
   <script src="js/app.js"></script>
+  <script src="js/projectViews.js"></script>
 </body>
 </html>

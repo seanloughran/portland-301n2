@@ -84,6 +84,49 @@ p{
   padding: 10px;
 }
 
+/*NAV STYLING*/
+.nav-container{
+  margin: 30px auto;
+  border-radius: 3px;
+  background-color: rgba(66, 84, 107, 0.14);
+  padding: 1% 1%;
+  text-align: center;
+}
+
+nav ul{
+  margin: auto;
+  padding:10px;
+}
+
+nav li{
+  list-style-type: none;
+  border: solid rgba(64, 61, 61, 0.09) 1px;
+  padding: 10px;
+  border-radius: 2px;
+  background-color: rgba(140, 195, 176, 0.14);
+  margin: 5px;
+  font-size: 20px;
+}
+
+nav a{
+  text-decoration: none;
+  color: #437365;
+}
+
+/*SELECT */
+.select-container{
+  margin: 30px auto;
+  border-radius: 3px;
+  background-color: rgba(66, 84, 107, 0.14);
+  padding: 1% 5%;
+  width: 500px;
+  text-align: center;
+}
+
+select{
+  width: 100%;
+}
+
 /*ARTICLE STYLING*/
 
 article{
@@ -92,8 +135,6 @@ article{
   padding: 10px;
   border-radius: 3px;
 }
-
-
 
 .date{
   font-style: italic;
