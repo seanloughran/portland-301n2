@@ -6,6 +6,7 @@ $(function(){
     this.img = img;
     this.text = text;
     this.skills = skills;
+    this.url = url;
   };
 
   Project.prototype.toHtml = function(){
