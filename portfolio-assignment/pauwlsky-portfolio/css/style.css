@@ -2,15 +2,18 @@
 /*FONT ICONS AND ANCHORS */
 
 @import url(http://weloveiconfonts.com/api/?family=fontawesome);
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
 
 /*fontawesome*/
 [class*="fontawesome-"]:before {
   font-family: 'FontAwesome', sans-serif;
 }
-
-a.font-icon:hover{
-  color: #4D637C;
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
 }
+
 
 .font-icon{
   text-decoration: none;
@@ -39,9 +42,21 @@ h6 {
   font-family: 'Roboto', sans-serif;
 }
 
+a{
+  color: #6F7367;
+}
+
+a:hover{
+  color: #4D637C;
+}
+
 p{
   font-family: 'Lora', serif;
+  font-size: 16px;
+  color: #214C3F;
 }
+
+
 
 
 /*HEADER AND BODY*/
@@ -77,7 +92,7 @@ p{
 .sub-header{
   font-weight:lighter;
   letter-spacing: 2px;
-  margin-left: 5%;
+  margin: 0 5%;
   color: #2E6957;
 }
 
@@ -128,9 +143,11 @@ select{
   -webkit-appearance:none;
   padding:10px;
   width: 30%;
+  height: 55%;
   font-size: 15px;
   color:  #437365;
   background-color: rgba(140, 195, 176, 0.14);
+  border: solid rgba(64, 61, 61, 0.09) 1px;
 }
 
 /*ARTICLE CONTENT STYLING*/
@@ -232,6 +249,27 @@ img{
 #about div.header-container{
   background-color: rgba(225, 225, 225, 0.64);
   justify-content: flex-end;
+}
+
+footer{
+  display: flex;
+  align-items: center;
+  height: 3em;
+  border: 1px solid rgba(225, 225, 225, 0.64);
+  border-radius: 1px;
+  background-color: rgba(225, 225, 225, 0.64);
+  margin: 1%;
+  padding: 0;
+  justify-content: space-around;
+}
+
+footer h4{
+  font-size: 22px;
+  color: #6F7367;
+}
+
+footer a{
+  text-decoration: none;
 }
 
 

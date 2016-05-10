@@ -10,7 +10,6 @@ portfolioView.populateFilters=function(){
         skills.forEach(function(item){
           var option = '<option val="' + item + '">' + item + '</option>';
           if($('#skills-select option[val="'+ item +'"]').length===0){
-            console.log(($('#skills-select option[val="'+ item +'"]').length));
             $('#skills-select').append(option);
           }
         });
@@ -36,9 +35,15 @@ portfolioView.showSection = function(){
 portfolioView.filterSelected = function(){
   $('#skills-select').on('change', function(e){
     var $selectVal = $(this).val();
+    if($selectVal === null){
+      return;
+    }
     $projectCategories = $('a[data-category="'+ $selectVal +'"]');
     $('article').hide();
     $projectCategories.parents('article').fadeIn();
+    if($selectVal === 'See All Categories'){
+      $('article').show();
+    }
   });
 };
 
