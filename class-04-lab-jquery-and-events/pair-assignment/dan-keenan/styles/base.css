@@ -1,0 +1,88 @@
+/* TODO: Add some coordinated colors to make the blog more distinguished:
+         Use an accent color for all links, and remove their underline. */
+
+body {
+  line-height: 1.5;
+  font-size: 100%;
+  color: #344552;
+}
+
+hr {
+  margin-top: 80px;
+  width: 80%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/*TEXT STYLES
+=======================================*/
+p {
+  font-size: 1em;
+}
+
+address {
+  display: inline-block;
+}
+
+/*LINK STYLES
+=======================================*/
+
+a, a:link, a:active {
+  color: #777;
+}
+
+a:hover, a:focus {
+}
+
+a:visited {
+}
+
+/*HEADER AND NAVIGATION STYLES
+=======================================*/
+
+.site-header {
+  padding: .1em;
+  text-align: center;
+  background-color: rgba(125, 114, 122, 0.11);
+  margin: 5px;
+  border: solid rgba(73, 73, 93, 0.14) 5px;
+  border-radius: 4px;
+}
+
+.site-header h1{
+  color:#344552;
+  font-size: 50px;
+}
+
+#filters {
+  padding: 20px;
+  text-align: center;
+}
+
+#filters select {
+    width: 400px;
+    padding: 5px;
+}
+
+ul{
+  text-align: center;
+}
+/*ARTICLE STYLES
+=======================================*/
+article{
+  background-color: rgba(220, 220, 230, 0.83);
+  margin: 50px 5px 50px 5px;
+  padding: 2rem;
+  border: 1px solid #B7B0B0;
+}
+
+/*MEDIA QUERIES
+=======================================*/
+@media only screen and (max-width: 500px) {
+    #filters select{
+      width: 100%;
+      padding:10px;
+    }
+}
