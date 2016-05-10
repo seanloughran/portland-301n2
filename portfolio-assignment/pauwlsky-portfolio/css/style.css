@@ -1,0 +1,176 @@
+
+/*FONT ICONS AND ANCHORS */
+
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+/*fontawesome*/
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+a.font-icon:hover{
+  color: #4D637C;
+}
+
+.font-icon{
+  text-decoration: none;
+  font-size: 30px;
+  color: #6F7367;
+}
+
+.url-text{
+  font-size: 17px;
+  display: inline-block;
+  margin: 0 0 0 10px;
+  font-style: italic;
+}
+
+/*GLOBAL STYLES*/
+html{
+  background-color: #EFF0F1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
+p{
+  font-family: 'Lora', serif;
+}
+
+/*HEADER AND BODY*/
+
+.header-container{
+  border-radius: 3px;
+  background-color: rgba(66, 84, 107, 0.14);
+  padding: 1% 5%;
+  display: flex;
+  align-items: center;
+}
+
+.logo{
+  width: 25%;
+  display: inline-block;
+}
+
+.me{
+  border-radius: 50%;
+}
+
+.header{
+  font-weight:lighter;
+  letter-spacing: 2px;
+  margin: 0 2%;
+  font-size: 40px;
+  color: #2E6957;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.sub-header{
+  font-weight:lighter;
+  letter-spacing: 2px;
+  margin-left: 5%;
+  color: #2E6957;
+}
+
+.container{
+  padding: 10px;
+}
+
+/*ARTICLE STYLING*/
+
+article{
+  margin-top: 30px;
+  background-color: rgba(225, 225, 225, 0.64);
+  padding: 10px;
+  border-radius: 3px;
+}
+
+
+
+.date{
+  font-style: italic;
+}
+
+.title-date{
+  padding:2px 40px 2px 40px;
+}
+
+.text{
+  margin: 10px;
+}
+
+.text-right{
+  text-align:right;
+}
+
+.text-left{
+  text-align:left;
+}
+
+hr{
+  border: 1px solid #6F7367;
+  clear: both;
+}
+
+.skillsGithub{
+  padding: 0 20px 20px;
+  margin: 0;
+}
+/*IMAGE STYLING*/
+img{
+  max-width: 100%;
+}
+
+.image{
+  display: flex;
+  max-height: 250px;
+  margin: 0 20px 50px 20px;
+}
+
+.image-left {
+  float: left;
+  margin: 10px;
+}
+
+.image-right{
+  float: right;
+}
+
+
+/*VIDEO MODAL*/
+/*DISCLAIMER!! USED CODE EXAMPLE FROM W3 SCHOOLS CAN EXPLAIN MODAL CODE THOUGH*/
+.modal{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0px;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content{
+  background-color: #fefefe;
+  margin: auto;
+  margin-top: 20px;
+  width: 70%;
+  padding: 20px;
+}
+
+
+/*ABOUT ME*/
+
+#about div.header-container{
+  background-color: rgba(225, 225, 225, 0.64);
+  justify-content: flex-end;
+}
