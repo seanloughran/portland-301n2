@@ -10,6 +10,10 @@
 
 }
 
+.template {
+  display: none;
+}
+
 body {
   padding: 1em;
 }
