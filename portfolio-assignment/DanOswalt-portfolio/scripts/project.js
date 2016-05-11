@@ -56,19 +56,33 @@ ProjectModule.prototype.load = function() {
 
 };
 
+/***
+ * class ViewHandler
+ **/
+
+function ViewHandler() {
+
+};
+
+ViewHandler.prototype.handleTabClicks = function() {
+  $('#nav-links').on('click', 'li.tab', function(e){
+    e.preventDefault();
+    var $dataContent = $(this).attr('data-content');
+    console.log($dataContent);
+    $('.tab-view').fadeOut('fast');
+    $('#' + $dataContent).fadeIn('fast');
+  });
+};
+
+
 /****
  * Code to run on page load
  **/
 
 $(function() {
-  new ProjectModule(projectData).load();
+  var projectModule = new ProjectModule(projectData);
+  var viewHandler = new ViewHandler();
 
-  $('#nav-links').on('click', 'li.tab', function(e){
-    e.preventDefault();
-    var $dataContent = $(this).attr('data-content');
-    console.log($dataContent);
-    $('.tab-view').hide();
-    $('#' + $dataContent).show();
-  });
-
+  projectModule.load();
+  viewHandler.handleTabClicks();
 });
