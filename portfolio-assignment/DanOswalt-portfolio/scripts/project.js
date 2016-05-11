@@ -58,7 +58,7 @@ ProjectModule.prototype.load = function() {
 
 /****
  * Code to run on page load
- ****/
+ **/
 
 $(function() {
   new ProjectModule(projectData).load();

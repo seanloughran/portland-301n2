@@ -8,11 +8,12 @@
 
 #projects {
   background-color: white;
-  margin-left: auto;
-  margin-right: auto;
   padding: 2%;
 }
 
+#projects h2 {
+  margin-bottom: 0;
+}
 .contributors {
   color: #5d5d5d;
 }
@@ -28,4 +29,7 @@
   max-height: 20vw;
   max-width: 20vw;
   object-fit: cover;
+}
+time {
+  font-size: .75em;
 }
