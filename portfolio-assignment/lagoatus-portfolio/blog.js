@@ -29,7 +29,7 @@ Projects.prototype.toHtml = function() {
   $newProject.find('time').html(parseInt((new Date() - new Date(this.completionDate))/60/60/24/1000) + ' days ago');
   // The date jquery above I left intact.... not sure how to change in a way to make it original
 
-//$newProject.removeClass('template')
+  $newProject.removeClass('template');
   return $newProject;
 };
 
