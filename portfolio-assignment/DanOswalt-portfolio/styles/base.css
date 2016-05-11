@@ -1,6 +1,12 @@
+/***
+ * Base rules
+ **/
+
 main {
   text-align: center;
   font-family: 'Courier', sans-serif;
+  color: #010101;
+  background-color: #010101;
 }
 
 h1, h2, h3, h4 {
@@ -9,18 +15,55 @@ h1, h2, h3, h4 {
 }
 
 #title-headline {
-  display: inline-block;
-}
-
-#nav-links {
-  display: inline-block;
+  font-size: 66px;
+  color: #E8E2CC;
 }
 
 a {
   text-decoration: none;
+  color: #AC1603;
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
+ul {
+  padding: 0;
 }
 
 li {
   list-style: none;
   display: inline-block;
+}
+
+/***
+ * Layout rules
+ **/
+
+#title-headline {
+  display: inline-block;
+}
+
+#nav-links {
+  display: inline-block;
+  min-width: 100%;
+  margin: -60px 0 0 0;
+  padding: 0px;
+  text-align: center;
+}
+
+#nav-links li {
+  background-color: #AC1603;
+  margin: 2px;
+  padding: 8px;
+  margin-bottom: 30px;
+}
+
+#nav-links li:hover {
+  opacity: 0.5;
+}
+
+#nav-links a {
+  color: white;
 }

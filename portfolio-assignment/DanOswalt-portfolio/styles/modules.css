@@ -1,0 +1,26 @@
+#projects-module {
+  width: 75%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.byline {
+  font-size: 75%;
+  opacity: 0.75;
+}
+
+.project {
+  background-color: #E8E2CC;
+  margin: 50px auto;
+  padding: 10px;
+  max-width: 600px;
+}
+
+.title {
+  font-size: 40px;
+}
+
+.title,
+.author {
+  color: #AC1603;
+}
