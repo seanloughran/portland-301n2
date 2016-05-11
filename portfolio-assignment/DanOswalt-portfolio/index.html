@@ -16,6 +16,8 @@
         <h1 id='title-headline'>Dan Oswalt</h1>
         <nav id='nav-links'>
           <ul>
+            <li class="tab" data-content="projects-module"><a href=''>Home<a></li>
+            <li class="tab" data-content="about"><a href=''>About<a></li>
             <li><a href='https://github.com/DanOswalt' target="_blank" >GitHub<a></li>
             <li><a href='' target="_blank" >Twitter<a></li>
             <li><a href='' target="_blank" >LinkedIn<a></li>
@@ -24,7 +26,7 @@
 
       </header>
 
-      <section id='projects-module'>
+      <section id='projects-module' class='tab-view'>
         <!-- Template for a Project -->
         <div class='project template'>
           <header>
@@ -45,10 +47,22 @@
           </header>
         </div>
       </section>
+
+      <section id='about' class='tab-view'>
+        <div class='about-container'>
+          <img src='img/profilepic.jpeg'>
+          <p>Some info about me!</p>
+          <p>Fascinating information Fascinating information Fascinating information Fascinating information Fascinating information  </p>
+        </div>
+      </section>
+
+      <footer>
+      &copy; 2016 Dan Oswalt <!--want this to be sticky-->
+      </footer>
+
+    </main>
   </body>
-  <footer>
-  &copy; 2016 Dan Oswalt
-  </footer>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   <script src="scripts/projectData.js"></script>
   <script src="scripts/project.js"></script>
