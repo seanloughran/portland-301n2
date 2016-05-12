@@ -1,3 +1,0 @@
-# code-blog
-
-#intialized readme
