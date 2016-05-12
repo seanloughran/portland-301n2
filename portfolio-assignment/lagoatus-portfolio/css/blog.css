@@ -40,6 +40,10 @@ a {
 
 /*MAIN BODY CONTENT
 ===============================================================*/
+.summaryDiv {
+  font-style: italic;
+  color: gray;
+}
 
 .template {
     display: none;
