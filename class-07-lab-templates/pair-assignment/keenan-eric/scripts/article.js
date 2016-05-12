@@ -13,11 +13,14 @@ Article.prototype.toHtml = function() {
   // done TODO: Use handlebars to render your articles.
   //       - Get your template from the DOM.
   //       - Now "compile" your template with Handlebars.
+  // console.log(this.title);
+  var daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
+  this.publishedOn = 'published ' + daysAgo + ' days ago' + ':' + '(draft)';
   var articleTemplate = $('#article').html();
   var compiledTemplate = Handlebars.compile(articleTemplate);
-  var html = compiledTemplate(rawData);
-  $('#articleContainer').append(html);
-
+  var html = compiledTemplate(this);
+  // $('#articleContainer').append(html);
+  return html;
 
   // DONE: If your template will use properties that aren't on the object yet, add them.
   //   Since your template can't hold any JS logic, we need to execute the logic here.
@@ -35,18 +38,14 @@ rawData.sort(function(a,b) {
   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
 });
 
-rawData.forEach(function(item){
-  var daysAgo = parseInt((new Date() - new Date(item.publishedOn))/60/60/24/1000);
-  item.publishedOn = 'published ' + daysAgo + ' days ago' + ':' + '(draft)';
+
+rawData.forEach(function(ele) {
+  articles.push(new Article(ele));
 })
 
-// rawData.forEach(function(ele) {
-//   articles.push(new Article(ele));
-// })
-
-Article.prototype.toHtml();
+// Article.prototype.toHtml();
 
 
-// articles.forEach(function(a){
-//   $('#articles').append(a.toHtml())
-// });
+articles.forEach(function(a){
+  $('#articles').append(a.toHtml());
+});

@@ -18,7 +18,7 @@
         - If your object doesn't have values you need yet, you can add those properties in the model.
     -->
     <script id="article" type="text/x-handlebars-template">
-          {{#each this}}
+          {{#with this}}
           <article data-category="{{category}}">
             <header>
               <h1>{{title}}</h1>
@@ -30,7 +30,7 @@
           <section class="article-body">{{{body}}}</section>
           <a href="#" class="read-on">Read on &rarr;</a>
         </article>
-        {{/each}}
+        {{/with}}
     </script>
 
   </head>
@@ -69,9 +69,6 @@
           </ul>
         </div>
       </section>
-      <div id="articleContainer">
-        <!-- article content goes here -->
-      </div>
       <section id="about" class="tab-content">
         <header>
           Welcome to my Blog
