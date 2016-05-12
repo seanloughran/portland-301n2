@@ -68,7 +68,7 @@ footer {
 
 hr {
     margin: 1em;
-    width: 100%;
+    /*width: 100%;*/
     margin: 0 auto;
 }
 address {
@@ -120,6 +120,7 @@ img {
     #container main {
       width: 100%;
     }
+
     .navList li {
         display: block;
         padding: 0em;
@@ -151,11 +152,12 @@ img {
         margin-right: 1%;
     }
 }
+
 a:hover {
     color: aliceblue;
 }
 .hrAppend {
-    margin: 3em;
+    margin: 3rem;
 }
 
 /*CONTENT TAKEN FROM https://github.com/mattboldt/typed.js/
