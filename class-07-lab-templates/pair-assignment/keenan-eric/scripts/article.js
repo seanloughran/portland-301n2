@@ -14,8 +14,8 @@ Article.prototype.toHtml = function() {
   //       - Get your template from the DOM.
   //       - Now "compile" your template with Handlebars.
   // console.log(this.title);
-  var daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
-  this.publishedOn = 'published ' + daysAgo + ' days ago' + ':' + '(draft)';
+  this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
+  this.publishStatus = this.publishedOn ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
   var articleTemplate = $('#article').html();
   var compiledTemplate = Handlebars.compile(articleTemplate);
   var html = compiledTemplate(this);
