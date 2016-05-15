@@ -10,20 +10,14 @@ function Article (opts) {
 }
 
 Article.prototype.toHtml = function() {
-<<<<<<< HEAD
-  // CRJ: Use handlebars to render your articles.
-  //       - Get your template from the DOM.
-  //       - Now "compile" your template with Handlebars.
-  var source   = $("#entry-template").html();
-  var template = Handlebars.compile(source);
+  var templateScript = $('#articleTemplate').html();
 
-=======
-  // DONE: Use handlebars to render your articles.
+  var finalTemplate = Handlebars.compile(templateScript);
+
+
+  // TODO: Use handlebars to render your articles.
   //       - Get your template from the DOM.
   //       - Now "compile" your template with Handlebars.
-  var appTemplate = $('#article-template').html()
-  var compiledTemplate = Handlebars.compile(appTemplate);
->>>>>>> a1ada185c68c736deb9f263d2891571b930f503a
 
   // DONE: If your template will use properties that aren't on the object yet, add them.
   //   Since your template can't hold any JS logic, we need to execute the logic here.
@@ -32,14 +26,8 @@ Article.prototype.toHtml = function() {
   this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
   this.publishStatus = this.publishedOn ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
 
-<<<<<<< HEAD
   // TODO: Use the function that Handlebars gave you to return your filled-in html template for THIS article.
-  return template(this);
-=======
-  // DONE: Use the function that Handlebars gave you to return your filled-in html template for THIS article.
-  return compiledTemplate(this);
-
->>>>>>> a1ada185c68c736deb9f263d2891571b930f503a
+  return finalTemplate(this);
 };
 
 rawData.sort(function(a,b) {
@@ -48,11 +36,7 @@ rawData.sort(function(a,b) {
 
 rawData.forEach(function(ele) {
   articles.push(new Article(ele));
-<<<<<<< HEAD
-});
-=======
 })
->>>>>>> a1ada185c68c736deb9f263d2891571b930f503a
 
 articles.forEach(function(a){
   $('#articles').append(a.toHtml())
