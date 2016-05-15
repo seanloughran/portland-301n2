@@ -9,7 +9,7 @@ var projectRawData = [
   {
     title:       'Bcykleta Bicycle Store - 201 Final Project',
     ghPagesUrl:  'http://seanloughran.github.io/bcykleta/',
-    linkTitle:   'Bcykleta", "Images/bcykleta.png',
+    linkTitle:   'Bcykleta',
     image:       'Images/bcykleta.png',
     description: 'This was the final project of my Code Fellows 201 course.</p>The primary concept was a Portland bicycle shop that would take donated bikes and sell them.</p><p>The site would also have the functionality to take information for people who wanted to volunteer for the shop.</p>'
   },

@@ -14,14 +14,19 @@ function Project(opts) {
 // var class201FinalProject = new Project("Bcykleta Bicycle Store - 201 Final Project", "http://seanloughran.github.io/bcykleta/", "Bcykleta", "Images/bcykleta.png", "This was the final project of my Code Fellows 201 course.</p>The primary concept was a Portland bicycle shop that would take donated bikes and sell them.</p><p>The site would also have the functionality to take information for people who wanted to volunteer for the shop.</p>");
 
 //Clones project template from page, adds in information, and returns that grouped together.
-Project.prototype.addProject = function(project) {
-  var $newProject = $('article.template').clone();
-  $newProject.removeClass('template');
-  $newProject.find('.project_title').html(this.title);
-  $newProject.find('.project_url').attr('href', this.ghPagesUrl);
-  $newProject.find('.project_picture').attr('src', this.image);
-  $newProject.find('.project_description').html(this.description);
-  return $newProject;
+Project.prototype.addProject = function() {
+  var templateScript = $('#projectTemplate').html();
+  var compiledTemplate = Handlebars.compile(templateScript);
+
+  return compiledTemplate(this);
+
+  // var $newProject = $('article.template').clone();
+  // $newProject.removeClass('template');
+  // $newProject.find('.project_title').html(this.title);
+  // $newProject.find('.project_url').attr('href', this.ghPagesUrl);
+  // $newProject.find('.project_picture').attr('src', this.image);
+  // $newProject.find('.project_description').html(this.description);
+  // return $newProject;
 }
 
 
@@ -36,7 +41,7 @@ projectArray.forEach(function(a){
   $('main').append(a.addProject(a));
 });
 
-$('.template').hide();
+//$('.template').hide();
 
 
 // Begin Section handling navigation tabs
@@ -58,11 +63,7 @@ projectView.showMoreDescription = function() {
 };
 
 //miscellaneous Code
-projectView.addFloat = function() {
-  $('.portfolio_item').on('load', function() {
 
-  });
-};
 
 $(document).ready(function(){
   projectView.tabNavigation();
