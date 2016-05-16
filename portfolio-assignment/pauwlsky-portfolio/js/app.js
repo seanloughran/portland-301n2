@@ -36,7 +36,7 @@ $(function(){
     if (lastArticle.prev('article').find('.title-date').hasClass('text-left')){
       lastArticle.find('.title-date').removeClass('text-left').addClass('text-right');
       lastArticle.find('img').removeClass('image-left').addClass('image-right');
-      lastArticle.find('.skillsGithub').removeClass('text-right').addClass('text-left');
+      lastArticle.find('.skills-github').removeClass('text-right').addClass('text-left');
     };
   };
 
