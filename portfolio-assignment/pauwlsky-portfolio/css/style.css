@@ -1,18 +1,4 @@
 
-/*FONT ICONS AND ANCHORS */
-
-@import url(http://weloveiconfonts.com/api/?family=fontawesome);
-@import url(http://weloveiconfonts.com/api/?family=entypo);
-
-
-/*fontawesome*/
-[class*="fontawesome-"]:before {
-  font-family: 'FontAwesome', sans-serif;
-}
-/* entypo */
-[class*="entypo-"]:before {
-  font-family: 'entypo', sans-serif;
-}
 
 
 .font-icon{
@@ -28,9 +14,16 @@
   font-style: italic;
 }
 
-/*GLOBAL STYLES*/
+/*BASE STYLES*/
+
 html{
+  font-size: 62.5%;
   background-color: #EFF0F1;
+}
+
+body{
+  margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -39,7 +32,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Istok Web', sans-serif;
+}
+
+p{
+  font-family: 'Lora', serif;
+  font-size: 1.6rem;
+  color: #214C3F;
 }
 
 a{
@@ -50,19 +49,14 @@ a:hover{
   color: #4D637C;
 }
 
-p{
-  font-family: 'Lora', serif;
-  font-size: 16px;
-  color: #214C3F;
+img{
+  max-width: 100%;
 }
-
-
-
 
 /*HEADER AND BODY*/
 
 .header-container{
-  border-radius: 3px;
+  border-radius: .3rem;
   background-color: rgba(66, 84, 107, 0.14);
   padding: 1% 5%;
   display: flex;
@@ -80,9 +74,9 @@ p{
 
 .header{
   font-weight:lighter;
-  letter-spacing: 2px;
+  letter-spacing: .2rem;
   margin: 0 2%;
-  font-size: 40px;
+  font-size: 4.0rem;
   color: #2E6957;
   text-align: center;
   display: inline-block;
@@ -90,8 +84,9 @@ p{
 }
 
 .sub-header{
+  font-size: 1.7rem;
   font-weight:lighter;
-  letter-spacing: 2px;
+  letter-spacing: .2rem;
   margin: 0 5%;
   color: #2E6957;
 }
@@ -102,20 +97,20 @@ p{
 
 /*NAV STYLING*/
 .nav-container{
+  height: 8.5rem;
   justify-content: center;
   align-items: center;
   display: flex;
-  margin: 30px auto;
-  border-radius: 3px;
+  margin: 3% auto;
+  border-radius: .3rem;
   background-color: rgba(66, 84, 107, 0.14);
   padding: 1% 1%;
   text-align: center;
-  height: 80px;
 }
 
 nav ul{
   display: flex;
-  padding:10px;
+  padding:1%;
   width: 60%;
 }
 
@@ -123,12 +118,12 @@ nav li{
   width: 50%;
   height: 100%;
   list-style-type: none;
-  border: solid rgba(64, 61, 61, 0.09) 1px;
-  padding: 10px;
-  border-radius: 2px;
+  border: solid rgba(64, 61, 61, 0.09) .1rem;
+  padding: 1.17%;
+  border-radius: .2rem;
   background-color: rgba(140, 195, 176, 0.14);
-  margin: 5px;
-  font-size: 20px;
+  margin: 1%;
+  font-size: 2.0rem;
 }
 
 nav a{
@@ -141,10 +136,10 @@ nav a{
 
 select{
   -webkit-appearance:none;
-  padding:10px;
+  padding:1.17%;
   width: 30%;
   height: 55%;
-  font-size: 15px;
+  font-size: 1.5rem;
   color:  #437365;
   background-color: rgba(140, 195, 176, 0.14);
   border: solid rgba(64, 61, 61, 0.09) 1px;
@@ -154,10 +149,10 @@ select{
 /*ARTICLE CONTENT STYLING*/
 
 article{
-  margin-top: 30px;
+  margin-top: 5%;
   background-color: rgba(225, 225, 225, 0.64);
-  padding: 10px;
-  border-radius: 3px;
+  padding: 1%;
+  border-radius: .3rem;
 }
 
 .date{
@@ -169,7 +164,7 @@ article{
 }
 
 .text{
-  margin: 10px;
+  margin: 1%;
 }
 
 .text-right{
@@ -182,9 +177,9 @@ article{
 
 a.show-more{
   text-decoration: none;
-  font-size: 17px;
-  letter-spacing: 1px;
-  margin: 0 20px;
+  font-size: 1.7rem;
+  letter-spacing: .1rem;
+  margin: 0 3%;
 }
 
 .skillsGithub{
@@ -193,23 +188,21 @@ a.show-more{
 
  .skills a{
   text-decoration: none;
-  font-size: 17px;
-  letter-spacing: 1px;
+  font-size: 1.7rem;
+  letter-spacing: .1rem;
 }
 
 hr{
-  border: 1px solid #6F7367;
+  border: .1rem solid #6F7367;
   clear: both;
 }
 
 /*IMAGE STYLING*/
-img{
-  max-width: 100%;
-}
+
 
 .image{
   display: flex;
-  max-height: 250px;
+  max-height: 25.0rem;
   margin: 0 20px 50px 20px;
 }
 
@@ -228,7 +221,7 @@ img{
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;
-  top: 0px;
+  top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
@@ -238,9 +231,10 @@ img{
 .modal-content{
   background-color: #fefefe;
   margin: auto;
-  margin-top: 20px;
-  width: 70%;
-  padding: 20px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 60%;
+  padding: 2%;
 }
 
 
@@ -254,9 +248,9 @@ img{
 footer{
   display: flex;
   align-items: center;
-  height: 3em;
-  border: 1px solid rgba(225, 225, 225, 0.64);
-  border-radius: 1px;
+  height: 6rem;
+  border: .1rem solid rgba(225, 225, 225, 0.64);
+  border-radius: .1rem;
   background-color: rgba(225, 225, 225, 0.64);
   margin: 1%;
   padding: 0;
@@ -264,7 +258,7 @@ footer{
 }
 
 footer h4{
-  font-size: 22px;
+  font-size: 2.2rem;
   color: #6F7367;
 }
 
