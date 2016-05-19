@@ -32,8 +32,8 @@ Project.prototype.addProject = function() {
 
 
 //Goes throuh projectData info and pushes to the articles array at the top of this page.
-projectRawData.forEach(function(ele) {
-  projectArray.push(new Project(ele));
+projectRawData.forEach(function(seansRawDataObject) {
+  projectArray.push(new Project(seansRawDataObject));
 });
 
 //Goes through project Array and appends them to the 'main' element
