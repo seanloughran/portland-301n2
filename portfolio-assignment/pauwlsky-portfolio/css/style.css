@@ -9,10 +9,6 @@ body{
   padding: 0;
 }
 
-p{
-  font-size: 1.6rem;
-}
-
 a{
   text-decoration: none;
   font-size: 1.6rem;
@@ -49,7 +45,7 @@ footer{
 }
 
 article{
-  margin-top: 5%;
+  margin: 4% 2%;
   padding: 1%;
 }
 
@@ -67,6 +63,10 @@ article{
   padding: 1% 5%;
   display: flex;
   align-items: center;
+}
+
+.container-right{
+  justify-content: flex-end;
 }
 
 .nav-container{
@@ -190,7 +190,7 @@ h6 {
 }
 
 p{
-  font-family: 'Lora', serif;
+  font: 1.8rem "HelveticaNeue", "Helvetica", "Arial", sans-serif;
   color: #214C3F;
 }
 
@@ -234,6 +234,7 @@ article{
 }
 
 hr{
+  margin: 3rem 1.5rem;
   border: .1rem solid #6F7367;
 }
 
@@ -325,7 +326,6 @@ footer h4{
     width: 100%;
     text-align: center;
   }
-
 }
 
 @media screen and (max-width: 890px){
