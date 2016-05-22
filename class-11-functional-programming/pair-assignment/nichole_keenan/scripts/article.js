@@ -91,20 +91,23 @@
     // the author's name, and one for the total number of words across all articles written by the specified author.
 
     return Article.allAuthors().map(function(author) {
-      
+    var wordCount = function(){
+      return Article.all.filter(function(article){
+          // console.log(article.author === author)
+          return article.author === author
+        })
+        .map(function(article) {
+          // console.log(article.body.split(" ").length)
+          return article.body.split(" ").length;
+        })
+        .reduce(function(a, b) {
+          return  a + b
+        })
+    }
+
       return {
         name : author,
-        numWords:   Article.all.filter(function(article){
-            // console.log(article.author === author)
-            return article.author === author
-          })
-          .map(function(article) {
-            // console.log(article.body.split(" ").length)
-            return article.body.split(" ").length;
-          })
-          .reduce(function(a, b) {
-            return  a + b
-          })
+        numWords: wordCount()
       }
     })
   };
