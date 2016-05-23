@@ -39,7 +39,11 @@ Article.loadAll = function(rawData) {
   rawData.forEach(function(ele) {
     Article.all.push(new Article(ele));
   })
+<<<<<<< HEAD
 };
+=======
+}
+>>>>>>> 5a15588a11057b4ec0ef7961e71250a8c9480cf3
 
 // This function will retrieve the data from either a local or remote source,
 // and process it, then hand off control to the View.
@@ -48,6 +52,7 @@ Article.fetchAll = function() {
     // When rawData is already in localStorage,
     // we can load it by calling the .loadAll function,
     // and then render the index page (using the proper method on the articleView object).
+<<<<<<< HEAD
     //TODO: What do we pass in here to the .loadAll function?
     var data = JSON.parse(localStorage.getItem('rawData'));
 
@@ -77,3 +82,20 @@ Article.fetchAll = function() {
     });
   }
 };
+=======
+    Article.loadAll(//TODO: What do we pass in here to the .loadAll function?
+    );
+    articleView.someFunctionToCall//(); //TODO: Change this fake method call to the correct one that will render the index page.
+  } else {
+    // TODO: When we don't already have the rawData, we need to:
+    // 1. Retrieve the JSON file from the server with AJAX (which jQuery method is best for this?),
+
+    // 2. Store the resulting JSON data with the .loadAll method,
+
+    // 3. Cache it in localStorage so we can skip the server call next time,
+
+    // 4. And then render the index page (perhaps with an articleView method?).
+
+  }
+}
+>>>>>>> 5a15588a11057b4ec0ef7961e71250a8c9480cf3
