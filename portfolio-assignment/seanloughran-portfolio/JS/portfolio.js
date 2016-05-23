@@ -1,4 +1,3 @@
-var projectArray = [];
 
 //project object constructor
 function Project(opts) {
@@ -8,6 +7,8 @@ function Project(opts) {
   this.image = opts.image;
   this.description = opts.description;
 }
+
+Project.projectArray = [];
 
 //Project obects.
 // var cookiestore = new Project("Portland Cookie Store Project", "http://seanloughran.github.io/cookie-store/", "Cookie Store", "Images/cookiestore.png", "<p>This project was based around the concept of a franchise of cookie store within the Portland, OR area.</p><p>The core functions used in this project were a table and form. The table was used to display the store information and sales information.</p><p>A form was created to able to add a new store to the table.");
@@ -27,45 +28,36 @@ Project.prototype.addProject = function() {
   // $newProject.find('.project_picture').attr('src', this.image);
   // $newProject.find('.project_description').html(this.description);
   // return $newProject;
-}
 
+};
 
 
 //Goes throuh projectData info and pushes to the articles array at the top of this page.
-projectRawData.forEach(function(seansRawDataObject) {
-  projectArray.push(new Project(seansRawDataObject));
-});
+Project.localLoad = function(localSData) {
+  localSData.forEach(function(projectRawObject) {
+    Project.projectArray.push(new Project(projectRawObject));
+  });
+};
 
-//Goes through project Array and appends them to the 'main' element
-projectArray.forEach(function(a){
-  $('main').append(a.addProject(a));
-});
+Project.infoFetch = function() {
+  if (localStorage.localSData) {
+    Article.localLoad(JSON.parse(localStorage.getItem('localSData')));
+
+    projectView.initPrimaryPage();
+  } else {
+    $.ajax({
+      type: 'GET',
+      url: 'Data/projectData.json',
+      success: function (data) {
+        Article.localLoad(data);
+        localStorage.setItem('localSData', JSON.stringify(data));
+        projectView.initPrimaryPage();
+        console.log(data);
+      }
+    });
+  }
+};
+
+
 
 //$('.template').hide();
-
-
-// Begin Section handling navigation tabs
-
-var projectView = {};
-
-//Functionality for home and about me tabs.
-projectView.tabNavigation = function() {
-  $('nav').on('click','li',function(){
-    $('.tab-content').hide();
-    $('body').find('[id="'+$(this).attr('data-content')+'"]').show();
-  });
-
-  $('nav .tab:first').click();
-};
-
-projectView.showMoreDescription = function() {
-
-};
-
-//miscellaneous Code
-
-
-$(document).ready(function(){
-  projectView.tabNavigation();
-  projectView.showMoreDescription();
-});
