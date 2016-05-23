@@ -27,4 +27,4 @@ projectView.initPrimaryPage = function(){
 
   projectView.tabNavigation();
   projectView.showMoreDescription();
-});
+};

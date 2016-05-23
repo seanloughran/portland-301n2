@@ -20,7 +20,7 @@ Project.prototype.addProject = function() {
   var compiledTemplate = Handlebars.compile(templateScript);
 
   return compiledTemplate(this);
-
+  console.log('Project added');
   // var $newProject = $('article.template').clone();
   // $newProject.removeClass('template');
   // $newProject.find('.project_title').html(this.title);
@@ -41,20 +41,23 @@ Project.localLoad = function(localSData) {
 
 Project.infoFetch = function() {
   if (localStorage.localSData) {
-    Article.localLoad(JSON.parse(localStorage.getItem('localSData')));
 
+    Project.localLoad(JSON.parse(localStorage.getItem('localSData')));
+    console.log('Local storage fetched.');
     projectView.initPrimaryPage();
+
   } else {
     $.ajax({
       type: 'GET',
       url: 'Data/projectData.json',
       success: function (data) {
-        Article.localLoad(data);
+        Project.localLoad(data);
         localStorage.setItem('localSData', JSON.stringify(data));
         projectView.initPrimaryPage();
         console.log(data);
       }
     });
+    console.log('local storage created');
   }
 };
 
