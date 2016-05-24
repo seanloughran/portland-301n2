@@ -21,7 +21,7 @@ projectView.showMoreDescription = function() {
 
 projectView.initPrimaryPage = function(){
   //Goes through project Array and appends them to the 'main' element
-  Project.projectArray.forEach(function(a){
+  Project.all.forEach(function(a){
     $('main').append(a.addProject(a));
   });
 
