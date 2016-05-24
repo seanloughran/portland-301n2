@@ -64,3 +64,12 @@ article h2 {
   line-height: 1.5;
   font-family: "Lucida Console", Monaco, monospace;
 }
+
+.read-more {
+  color: white;
+  text-decoration: none;
+}
+
+.read-more:active {
+  color: white;
+}
