@@ -3,34 +3,46 @@ var projectView = {};
 // create tab views of content in #projects and #about
 projectView.handleMainNav = function() {
   $('.mainNav').on('click', 'li', function() {
+    $('.jumbotron').fadeTo(5000, 1);
     $('.page-content').hide();
-    $('main').find('[id="'+$(this).attr('data-section')+'"]').show();
+    $('main').find('[id="'+$(this).attr('data-section')+'"]').fadeIn(5000);
+    projectView.scroll(this);
   });
-  $('.topNav .tab:first').click();
 };
 
-// TODO: fix read more function
-
+// more and shrink function
 projectView.createTeaser = function() {
-  $('.projDescription *:nth-of-type(2n+1)').hide();
+  $('.projDescription *:nth-child(n)').hide();
+  $('.projDescription *:nth-child(1)').show();
   $('.shrink').hide();
   $('.read-on').on('click', function(event) {
     event.preventDefault();
-    $(this).prev().find('*:nth-of-type(2n+1)').show();
+    $(this).prev().find('*:nth-child(n)').slideDown(1500);
     $(this).hide();
-    $('.shrink').show();
+    $(this).next().show();
   });
   $('.shrink').on('click', function(e) {
     event.preventDefault();
-    $('.projDescription *:nth-of-type(2n+1)').hide();
-    $('.read-on').show();
-    $('.shrink').hide();
+    $('.projDescription *:nth-child(n)').hide();
+    $('.projDescription *:nth-child(1)').show();
+    $(this).hide();
+    $(this).prev().show();
   });
 };
 
+projectView.scroll = function(tease) {
+  $('html, body').animate({
+    scrollTop: parseInt($(tease).offset().top)
+  }, 2000);
+};
 
 //call the functions
-$(document).ready(function() {
+projectView.initIndexPage = function(){
+  Project.all.forEach(function(a){
+    $('#projects').append(a.toHtml());
+  });
+  $('.page-content').hide();
+  $('.jumbotron').fadeTo(15000, 0.0);
   projectView.handleMainNav();
   projectView.createTeaser();
-});
+};
