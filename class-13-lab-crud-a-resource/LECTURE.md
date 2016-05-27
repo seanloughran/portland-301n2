@@ -93,6 +93,10 @@ Why is that? What if you wanted to represent an equals sign `=` or question mark
 
 # Demo
 
+## JSON Validator
+
+[source](https://jsonformatter.curiousconcept.com/)
+
 
 # Pair Programming
 ```
