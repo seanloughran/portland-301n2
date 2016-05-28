@@ -17,12 +17,12 @@
     var compiledTemplate = Handlebars.compile(templateScript);
 
     return compiledTemplate(this);
-    console.log('Project added');
+    console.log('Handlebars template compiled');
 
   };
 
 
-  //Goes throuh projectData info and pushes to the articles array at the top of this page.
+  //Goes through projectData info and pushes to the Project.all array.
   Project.localLoad = function(localSData) {
     localSData.forEach(function(projectRawObject) {
       Project.all.push(new Project(projectRawObject));
