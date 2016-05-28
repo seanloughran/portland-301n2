@@ -39,12 +39,12 @@ Project.infoFetch = function() {
     $.ajax({
       type: 'GET',
       url: 'Data/projectData.json',
-        success: function(data) {
-          Project.localLoad(data);
-          localStorage.setItem('localSData', JSON.stringify(data));
-          projectView.initPrimaryPage();
-          console.log(data);
-        }
+      success: function(data) {
+        Project.localLoad(data);
+        localStorage.setItem('localSData', JSON.stringify(data));
+        projectView.initPrimaryPage();
+        console.log(data);
+      }
     });
     console.log('local storage created');
   }
