@@ -24,8 +24,12 @@
 
   //Goes through projectData info and pushes to the Project.all array.
   Project.localLoad = function(localSData) {
-    localSData.forEach(function(projectRawObject) {
-      Project.all.push(new Project(projectRawObject));
+    // localSData.forEach(function(projectRawObject) {
+    //   Project.all.push(new Project(projectRawObject));
+    // });
+    Project.all = localSData.map(function(projectRawObject) {
+      console.log('Projects mapped');
+      return new Project(projectRawObject);
     });
   };
 
