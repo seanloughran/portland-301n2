@@ -9,35 +9,6 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
-
-    <script id="book-template" type="text/x-handlebars-template">
-      <section id="pagination" class="navigation">
-        {{#if hasPrevPage}}
-        <a href="index.html?page={{prevPage}}"> << Prev</a> |
-        {{/if}}
-        Page {{page}} |
-        <a href="index.html?page={{nextPage}}"> Next >> </a>
-      </section>
-
-      <section id="books">
-        <table border="1" style="width:100%">
-          <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Author</th>
-            <th>Year</th>
-          </tr>
-          {{#each books}}
-          <tr>
-            <td>{{id}}</td>
-            <td>{{title}}</td>
-            <td>{{author}}</td>
-            <td>{{year}}</td>
-          </tr>
-          {{/each}}
-        </table>
-      </section>
-    </script>
   </head>
   <body>
     <header class="site-header clearfix">
@@ -58,6 +29,8 @@
       </nav>
     </header>
     <main>
+      <section id="book-pagination" class="tab-content">
+      </section>
       <section id="books" class="tab-content">
       </section>
     </main>
@@ -73,21 +46,9 @@
     <script src="/vendor/scripts/html5sql.js"></script>
     <script src="/scripts/webdb.js"></script>
     <script src="/scripts/propretrieval.js"></script>
-    <script src="/scripts/person.js"></script>
+    <!-- <script src="/scripts/person.js"></script> -->
+    <script src="/scripts/template.js"></script>
     <script src="/scripts/book.js"></script>
-    <!-- <script src="/scripts/book-debug.js"></script> -->
-    <script>
-      var page = parseInt(new QueryData().page) || 1;
-      var pageSize = 10;
-
-      // DONE: Ensure that a database table for articles exists, every time we load the page.
-      console.log('begin calling createTable');
-      Book.createTable();
-      console.log('end calling createTable');
-      console.log('begin calling fetchAll');
-      Book.fetchAll(Book.initPage);
-      console.log('end calling fetchAll');
-
-    </script>
+    <script src="/scripts/book-debug.js"></script>
   </body>
 </html>
