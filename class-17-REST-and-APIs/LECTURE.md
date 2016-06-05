@@ -12,7 +12,6 @@
 
 ### Assignments for this Week
 
-* Mon Jun  6th Lab 10 Recap: Portfolio Assignment Due
 * Mon Jun  6th Lab 12 REST: Pair Assignment Due
 * Fri Jun 10th Lab 11 Routes: Pair Assignment Due
 * Fri Jun 10th Lab 12 REST: Portfolio Assignment Due
