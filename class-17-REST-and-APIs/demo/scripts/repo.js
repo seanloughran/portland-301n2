@@ -12,9 +12,7 @@
         'Authorization': 'token ' + githubToken
       },
       success: function(data, message, xhr){
-        console.log('success');
         repos.all = data;
-        console.log('repos,all', repos.all);
       },
       error: function(xhr, status, error){
         console.log('inside fetchAll ajax error');
