@@ -1,13 +1,14 @@
 (function(module) {
 
+  Project = {};
   //project object constructor
-  function Project(opts) {
-    this.title = opts.title;
-    this.ghPagesUrl = opts.ghPagesUrl;
-    this.linkTitle = opts.linkTitle;
-    this.image = opts.image;
-    this.description = opts.description;
-  }
+  // function Project(opts) {
+  //   this.title = opts.title;
+  //   this.ghPagesUrl = opts.ghPagesUrl;
+  //   this.linkTitle = opts.linkTitle;
+  //   this.image = opts.image;
+  //   this.description = opts.description;
+  // }
 
   Project.all = [];
 
@@ -35,26 +36,33 @@
 
   //Checks local storage for stored json data. If nothing found makes an
   // ajax call to pull JSON data from projectData.json.
-  Project.infoFetch = function() {
-    if (localStorage.localSData) {
-
-      Project.localLoad(JSON.parse(localStorage.getItem('localSData')));
-      console.log('Local storage fetched.');
-      projectView.initPrimaryPage();
-
-    } else {
+  Project.infoFetch = function(callback) {
+    // if (localStorage.localSData) {
+    //
+    //   Project.localLoad(JSON.parse(localStorage.getItem('localSData')));
+    //   console.log('Local storage fetched.');
+    //   projectView.initPrimaryPage();
+    //
+    // } else {
       $.ajax({
         type: 'GET',
-        url: 'Data/projectData.json',
+        url: 'https://api.github.com/user/repos',
+        headers: {
+        'Authorization' : 'token ' + GHTOKEN
+        },
         success: function(data) {
-          Project.localLoad(data);
-          localStorage.setItem('localSData', JSON.stringify(data)); // Pushes pull data to local storage.
+          Project.all = data;
+          //Project.localLoad(data);
+          //localStorage.setItem('localSData', JSON.stringify(data)); // Pushes pull data to local storage.
           projectView.initPrimaryPage();
           console.log(data);
-        }
-      });
-      console.log('local storage created');
-    }
+        },
+        error: function(xhr, status, error) {
+          console.log('ajax error');
+        },
+      }).then(callback);
+    //   console.log('local storage created');
+    // }
   };
 
 
