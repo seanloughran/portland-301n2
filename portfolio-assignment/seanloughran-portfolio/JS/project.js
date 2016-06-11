@@ -13,14 +13,14 @@
   Project.all = [];
 
   //Clones project template from page, adds in information, and returns that grouped together.
-  Project.prototype.addProject = function() {
-    var templateScript = $('#projectTemplate').html();
-    var compiledTemplate = Handlebars.compile(templateScript);
-
-    return compiledTemplate(this);
-    console.log('Handlebars template compiled');
-
-  };
+  // Project.prototype.addProject = function() {
+  //   var templateScript = $('#projectTemplate').html();
+  //   var compiledTemplate = Handlebars.compile(templateScript);
+  //
+  //   return compiledTemplate(this);
+  //   console.log('Handlebars template compiled');
+  //
+  // };
 
 
   //Goes through projectData info and maps each created Project to the Project.all array.

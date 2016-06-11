@@ -2,7 +2,8 @@
   var projectController = {};
 
   projectController.index = function() {
-      $('#projects').show().siblings().hide();
+      $('#projects').show();
+      $('#home').hide();
 
       Project.infoFetch(projectView.initPrimaryPage);
   }
