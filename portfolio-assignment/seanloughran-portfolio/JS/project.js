@@ -48,7 +48,7 @@
         type: 'GET',
         url: 'https://api.github.com/user/repos',
         headers: {
-        'Authorization' : 'token ' + GHTOKEN
+        'Authorization' : 'token ' + repoToken
         },
         success: function(data) {
           Project.all = data;
