@@ -23,16 +23,16 @@
   // };
 
 
-  //Goes through projectData info and maps each created Project to the Project.all array.
-  Project.localLoad = function(localSData) {
-    // localSData.forEach(function(projectRawObject) {
-    //   Project.all.push(new Project(projectRawObject));
-    // });
-    Project.all = localSData.map(function(projectRawObject) {
-      console.log('Projects mapped');
-      return new Project(projectRawObject);
-    });
-  };
+  // //Goes through projectData info and maps each created Project to the Project.all array.
+  // Project.localLoad = function(localSData) {
+  //   // localSData.forEach(function(projectRawObject) {
+  //   //   Project.all.push(new Project(projectRawObject));
+  //   // });
+  //   Project.all = localSData.map(function(projectRawObject) {
+  //     console.log('Projects mapped');
+  //     return new Project(projectRawObject);
+  //   });
+  // };
 
   //Checks local storage for stored json data. If nothing found makes an
   // ajax call to pull JSON data from projectData.json.
@@ -44,23 +44,23 @@
     //   projectView.initPrimaryPage();
     //
     // } else {
-      $.ajax({
-        type: 'GET',
-        url: 'https://api.github.com/users/seanloughran/repos',
-        headers: {
+    $.ajax({
+      type: 'GET',
+      url: 'https://api.github.com/users/seanloughran/repos',
+      headers: {
         'Authorization' : 'token ' + repoToken
-        },
-        success: function(data) {
-          Project.all = data;
-          //Project.localLoad(data);
-          //localStorage.setItem('localSData', JSON.stringify(data)); // Pushes pull data to local storage.
-          projectView.initPrimaryPage();
-          console.log(data);
-        },
-        error: function(xhr, status, error) {
-          console.log('ajax error');
-        },
-      }).then(callback);
+      },
+      success: function(data) {
+        Project.all = data;
+        //Project.localLoad(data);
+        //localStorage.setItem('localSData', JSON.stringify(data)); // Pushes pull data to local storage.
+        projectView.initPrimaryPage();
+        console.log(data);
+      },
+      error: function(xhr, status, error) {
+        console.log('ajax error');
+      },
+    }).then(callback);
     //   console.log('local storage created');
     // }
   };
