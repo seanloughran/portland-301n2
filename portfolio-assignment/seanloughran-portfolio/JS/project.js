@@ -46,7 +46,7 @@
     // } else {
       $.ajax({
         type: 'GET',
-        url: 'https://api.github.com/user/repos',
+        url: 'https://api.github.com/users/seanloughran/repos',
         headers: {
         'Authorization' : 'token ' + repoToken
         },
