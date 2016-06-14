@@ -2,7 +2,7 @@
 
   var projectView = {};
 
-  var renderProject = Handlebars.compile($('#projectTemplate').text());
+  var renderJSONproject = Handlebars.compile($('#projectTemplate').text());
 
   //Functionality for home and about me tabs.
   projectView.tabNavigation = function() {
@@ -47,7 +47,7 @@
     //   $('#projects').append(a.addProject(a));
     // });
     $('#projects').append(
-      Project.all.map(renderProject)
+      jsonPull.all.map(renderJSONproject)
     );
 
     //projectView.tabNavigation();

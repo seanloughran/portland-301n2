@@ -2,11 +2,11 @@
   var projectController = {};
 
   projectController.index = function() {
-      $('#projects').show();
-      $('#home').hide();
+    $('#projects').show();
+    $('#home').hide();
 
-      Project.infoFetch(projectView.initPrimaryPage);
-  }
+    jsonPull.infoGrab(projectView.initPrimaryPage);
+  };
 
   module.projectController = projectController;
 }) (window);

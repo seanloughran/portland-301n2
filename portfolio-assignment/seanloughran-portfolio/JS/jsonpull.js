@@ -10,7 +10,7 @@
     this.description = opts.description;
   }
 
-  jdataProject.all = [];
+  jsonPull.all = [];
 
   //Clones project template from page, adds in information, and returns that grouped together.
   // Project.prototype.addProject = function() {
@@ -29,7 +29,7 @@
     // localSData.forEach(function(projectRawObject) {
     //   jdataProject.all.push(new Project(projectRawObject));
     // });
-    jdataProject.all = localSData.map(function(projectRawObject) {
+    jsonPull.all = localSData.map(function(projectRawObject) {
       console.log('Json data mapped');
       return new jdataProject(projectRawObject);
     });
@@ -39,10 +39,13 @@
   // ajax call to pull JSON data from projectData.json.
   jsonPull.infoGrab = function(callback) {
     if (localStorage.localSData) {
+
       jsonPull.localLoad(JSON.parse(localStorage.getItem('localSData')));
       console.log('Local storage fetched.');
       projectView.initPrimaryPage();
+
     } else {
+
       $.getJSON('Data/projectData.json', function(data) {
         jsonPull.localLoad(data);
         localStorage.setItem('localSData', JSON.stringify(data)); // Pushes pull data to local storage.
@@ -69,8 +72,8 @@
       // // }
     }
   };
-  
+
 
   //$('.template').hide();
-  module.Project = Project;
+  module.jsonPull = jsonPull;
 }) (window);
